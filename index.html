@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anvesha Saxena - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Anvesha</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about" class="card glass">
+            <h1><span class="accent">Anvesha Saxena</span></h1>
+            <h3>BTech (Core), 1st Semester</h3>
+            <p><span class="chip">Born and brought up in Kanpur &mdash; not living there currently</span></p>
+            <p>
+                Welcome! I am a BTech first-year student energized by technology and software. This site highlights my projects,
+                learning journey, and ways to connect.
+            </p>
+        </section>
+
+        <section id="projects" class="card glass">
+            <h2>Projects</h2>
+            <hr>
+            <div class="project-list">
+                <div class="project-item">
+                    <h4>Personal Portfolio <span class="project-label">HTML/CSS</span></h4>
+                    <p>A fresh, modern portfolio responsive on every device.</p>
+                </div>
+                <div class="project-item">
+                    <h4>To-Do App <span class="project-label">JavaScript</span></h4>
+                    <p>A simple yet powerful to-do manager built with vanilla JavaScript.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="card glass">
+            <h2>Skills</h2>
+            <table>
+                <tr>
+                    <th>Skill</th>
+                    <th>Level</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td><div class="skill-badge">Beginner</div></td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td><div class="skill-badge">Beginner</div></td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td><div class="skill-badge">Beginner</div></td>
+                </tr>
+                <tr>
+                    <td>React</td>
+                    <td><div class="skill-badge">Beginner</div></td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td><div class="skill-badge">Beginner</div></td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact" class="card glass">
+            <h2>Contact Me</h2>
+            <form>
+                <div class="input-row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <textarea placeholder="Your Message" rows="3"></textarea>
+                <button type="submit">Send ➔</button>
+            </form>
+        </section>
+    </main>
+
+    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+    <footer>
+        <small>&copy; 2025 Anvesha Saxena. All rights reserved.</small>
+    </footer>
+    <script>
+        window.onscroll = function() {
+            document.getElementById('backToTop').style.display =
+              window.scrollY > 300 ? 'block' : 'none';
+        };
+    </script>
+</body>
+</html>

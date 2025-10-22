@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+/* --- Gradient Glassmorphism Background --- */
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 45%, #fbc2eb 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 32px auto 0 auto;
+    z-index: 1;
+}
+
+.card {
+    margin: 32px 0;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(100,60,140,0.14);
+    padding: 2rem 2.5rem;
+    transition: box-shadow 0.25s;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(16px) saturate(1.2);
+    -webkit-backdrop-filter: blur(16px) saturate(1.2);
+    border: 1px solid rgba(173, 148, 255, 0.17);
+}
+
+nav {
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 1px 8px rgba(100,60,140,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 2.2vw;
+}
+
+.nav-brand {
+    font-weight: bold;
+    font-size: 1.45rem;
+    color: #6a11cb;
+    padding: 10px 0;
+    letter-spacing: 1.5px;
+}
+
+.nav-links a {
+    font-size: 1.07rem;
+    font-weight: 600;
+    color: #37375f;
+    text-decoration: none;
+    margin: 0 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.18s, color 0.18s;
+}
+.nav-links a:hover {
+    background: linear-gradient(90deg, #fbc2eb 0%, #a1c4fd 100%);
+    color: #4e148c;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: .5em;
+}
+
+h1 .accent {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-size: 2.3em;
+    letter-spacing: 1.2px;
+}
+
+hr {
+    border: none;
+    height: 2.4px;
+    width: 100%;
+    background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-radius: 3px;
+    margin: 1.3rem 0 1.9rem;
+}
+
+.chip {
+    background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+    color: #111;
+    border-radius: 12px;
+    padding: 3px 13px;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 9px;
+    display: inline-block;
+    letter-spacing: 0.3px;
+}
+
+.project-list {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.7rem;
+}
+.project-item {
+    flex: 1 1 180px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 15px;
+    box-shadow: 0 1px 6px rgba(161, 196, 253, 0.19);
+    padding: 1rem 1.1rem;
+    margin-bottom: .45rem;
+    min-width: 180px;
+}
+.project-label {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #6a11cb;
+    background: #e0c3fc;
+    border-radius: 9px;
+    padding: 2px 8px;
+    margin-left: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.94);
+}
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1.7px solid #c9cafc;
+    text-align: left;
+}
+th {
+    background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+    color: #37375f;
+    font-size: 1.07em;
+    letter-spacing: 0.7px;
+}
+.skill-badge {
+    padding: 5px 14px;
+    background: #fbc2eb;
+    color: #721294;
+    font-weight: bold;
+    border-radius: 9px;
+    font-size: 1em;
+    display: inline-block;
+    box-shadow: 0 1px 4px rgba(130,90,210,0.11);
+}
+
+/* --- Contact Form --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    margin-top: 1.2em;
+}
+.input-row {
+    display: flex;
+    gap: 0.9em;
+}
+input[type="text"], input[type="email"], textarea {
+    padding: 11px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f3eefe;
+    color: #322e4a;
+    box-shadow: 0 1.5px 7px rgba(133, 193, 233, 0.08);
+    outline: none;
+    margin-bottom: 0.33em;
+    width: 100%;
+    resize: none;
+}
+textarea {
+    min-height: 70px;
+    font-family: inherit;
+}
+
+button, input[type="submit"] {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.08em;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.24s, color 0.19s;
+    box-shadow: 0 2px 5px rgba(161, 196, 253, 0.13);
+    margin-top: 9px;
+}
+button:hover, input[type="submit"]:hover {
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    color: #fbc2eb;
+}
+
+/* --- Back to Top Button (Fixed Positioning) --- */
+#backToTop {
+    position: fixed;
+    right: 32px;
+    bottom: 38px;
+    background: linear-gradient(135deg, #89f7fe 10%, #fbc2eb 85%);
+    color: #6a11cb;
+    padding: 13px 17px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5em;
+    box-shadow: 0 4px 12px rgba(133, 193, 233, 0.22);
+    display: none;
+    cursor: pointer;
+    z-index: 10000;
+    transition: background 0.22s, color 0.22s;
+}
+#backToTop:hover {
+    background: linear-gradient(135deg, #fbc2eb, #89f7fe);
+    color: #fff;
+}
+
+/* --- Footer --- */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    color: #67587a;
+    font-size: 1em;
+    margin-top: 18px;
+    background: transparent;
+}
+
+/* --- Responsive Enhancements --- */
+@media (max-width: 1000px) {
+    main {
+        max-width: 96vw;
+        margin: 20px auto;
+    }
+    .card {
+        padding: 2rem 1rem;
+    }
+}
+@media (max-width: 700px) {
+    .nav-brand {
+        font-size: 1.05rem;
+    }
+    .nav-links a {
+        font-size: 0.97rem;
+        margin: 4px 7px;
+    }
+    .card {
+        margin: 17px 0;
+        padding: 1rem 3vw;
+    }
+    table, th, td {
+        font-size: 0.95em;
+    }
+    .input-row {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+}
