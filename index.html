@@ -2,101 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Anvesha Saxena - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Anvesha Saxena</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-brand">Anvesha</div>
-        <div class="nav-links">
+    <nav class="navbar">
+        <div class="navbar-title">My Portfolio</div>
+        <div class="navbar-links">
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
-
-    <main>
-        <section id="about" class="card glass">
-            <h1><span class="accent">Anvesha Saxena</span></h1>
-            <h3>BTech (Core), 1st Semester</h3>
-            <p><span class="chip"> Delhi, India  </span></p>
-            <p>
-                Welcome! I am a BTech first-year student energized by technology and software. This site highlights my projects,
-                learning journey, and ways to connect.
-            </p>
-        </section>
-
-        <section id="projects" class="card glass">
-            <h2>Projects</h2>
-            <hr>
-            <div class="project-list">
-                <div class="project-item">
-                    <h4>Personal Portfolio <span class="project-label">HTML/CSS</span></h4>
-                    <p>A fresh, modern portfolio responsive on every device.</p>
-                </div>
-                <div class="project-item">
-                    <h4>To-Do App <span class="project-label">JavaScript</span></h4>
-                    <p>A simple yet powerful to-do manager built with vanilla JavaScript.</p>
-                </div>
+    <div id="about" class="about-section">
+        <div class="about-title">About Me</div>
+        <div class="profile-photo-container">
+            <img src="image.jpg" alt="Anvesha Saxena" class="profile-photo">
+        </div>
+        <div class="about-desc">
+            Hi, my name is Anvesha Saxena. I am a B.Tech CSE Core 1st semester student from New Delhi.<br>
+            I am passionate about technology and always eager to learn and explore new things!
+        </div>
+    </div>
+    <div id="skills" class="skills-section">
+        <div class="skills-title">My Skills</div>
+        <table class="skills-table">
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td>HTML &amp; CSS</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td>Core Java</td>
+                <td>Beginner</td>
+            </tr>
+            <tr>
+                <td>Programming Fundamentals</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td>Problem Solving</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td>Data Structures (Basics)</td>
+                <td>Beginner</td>
+            </tr>
+        </table>
+    </div>
+    <div id="projects" class="projects-section">
+        <div class="projects-title">My Projects</div>
+        <div class="project-gallery">
+            <div class="project-item">
+                <img src="project1.jpg" alt="Project 1">
+                <div class="project-caption">Portfolio Website</div>
             </div>
-        </section>
-
-        <section id="skills" class="card glass">
-            <h2>Skills</h2>
-            <table>
-                <tr>
-                    <th>Skill</th>
-                    <th>Level</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td><div class="skill-badge">Beginner</div></td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td><div class="skill-badge">Beginner</div></td>
-                </tr>
-                <tr>
-                    <td>JavaScript</td>
-                    <td><div class="skill-badge">Beginner</div></td>
-                </tr>
-                <tr>
-                    <td>React</td>
-                    <td><div class="skill-badge">Beginner</div></td>
-                </tr>
-                <tr>
-                    <td>Python</td>
-                    <td><div class="skill-badge">Beginner</div></td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="contact" class="card glass">
-            <h2>Contact Me</h2>
-            <form>
-                <div class="input-row">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <textarea placeholder="Your Message" rows="3"></textarea>
-                <button type="submit">Send ➔</button>
-            </form>
-        </section>
-    </main>
-
-    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
-    <footer>
-        <small>&copy; 2025 Anvesha Saxena. All rights reserved.</small>
-    </footer>
+            <div class="project-item">
+                <img src="project2.jpg" alt="Project 2">
+                <div class="project-caption">To-Do App</div>
+            </div>
+            <div class="project-item">
+                <img src="project3.jpg" alt="Project 3">
+                <div class="project-caption">Calculator</div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="contact-section">
+        <div class="contact-title">Contact Me</div>
+        <form>
+            <div class="contact-row">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="contact-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="contact-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="2" required></textarea>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="contact-btn">Send</button>
+            </div>
+        </form>
+    </div>
     <script>
-        window.onscroll = function() {
-            document.getElementById('backToTop').style.display =
-              window.scrollY > 300 ? 'block' : 'none';
-        };
+      // For smooth scrolling on anchor links (modern browsers)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
     </script>
 </body>
 </html>
-
-
